@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Signal: signal.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Signal
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="annotated.html"><span>データ構造</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>大域各種</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">signal.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>模擬信号ライブラリ メイン処理  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="signallib_8h_source.html">signallib.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_context.html">Context</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">サンプル用構造体  <a href="struct_context.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:af938891011c0fa4f4ec9997fc55cb3dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signal_8c.html#af938891011c0fa4f4ec9997fc55cb3dc">OnInitialize</a> (void)</td></tr>
+<tr class="memdesc:af938891011c0fa4f4ec9997fc55cb3dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化コールバック  <a href="#af938891011c0fa4f4ec9997fc55cb3dc">[詳解]</a><br /></td></tr>
+<tr class="separator:af938891011c0fa4f4ec9997fc55cb3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae89b5dc193195c5d8f4a5c6e2c04e9d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signal_8c.html#ae89b5dc193195c5d8f4a5c6e2c04e9d0">OnStart</a> (void)</td></tr>
+<tr class="memdesc:ae89b5dc193195c5d8f4a5c6e2c04e9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始コールバック  <a href="#ae89b5dc193195c5d8f4a5c6e2c04e9d0">[詳解]</a><br /></td></tr>
+<tr class="separator:ae89b5dc193195c5d8f4a5c6e2c04e9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af401c7d98e761bea7edb3cf5f8eb609b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signal_8c.html#af401c7d98e761bea7edb3cf5f8eb609b">OnTimer</a> (int elapse)</td></tr>
+<tr class="memdesc:af401c7d98e761bea7edb3cf5f8eb609b"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマコールバック  <a href="#af401c7d98e761bea7edb3cf5f8eb609b">[詳解]</a><br /></td></tr>
+<tr class="separator:af401c7d98e761bea7edb3cf5f8eb609b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd5e276c1391af9169dcee245e52c56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signal_8c.html#addd5e276c1391af9169dcee245e52c56">OnButton</a> (void)</td></tr>
+<tr class="memdesc:addd5e276c1391af9169dcee245e52c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボタンコールバック  <a href="#addd5e276c1391af9169dcee245e52c56">[詳解]</a><br /></td></tr>
+<tr class="separator:addd5e276c1391af9169dcee245e52c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>模擬信号ライブラリ メイン処理 </p>
+<dl class="section author"><dt>著者</dt><dd>BeNest SDGr K.Urakari </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2015/11/14</dd></dl>
+<h3>概要</h3>
+<p>このファイルはSignalLibの使用方法を説明するためのサンプルファイルです。</p>
+<p>ライブラリからコールされる関数を一通りサンプル実装しています。 この実装を修正する(コールバック関数の中身を書き換える)ことでアプリケーションを実装します。</p>
+<p>ランプの描画やボタンの入力はライブラリ側で処理していますので、コールバック関数にはアプリケーション固有の処理のみを記述します。</p>
+<h3>サンプルの動作</h3>
+<p>サンプル動作として次の様に実装されています。あくまでライブラリの確認用サンプル実装ですので本来の動作ではありません。</p>
+<ul>
+<li>車用信号 　500msec周期で「消灯-&gt;青点灯-&gt;黄色点灯-&gt;赤点灯」を繰り返します。</li>
+<li>歩行者用信号 　ボタンが押される毎に「消灯-&gt;青点灯-&gt;赤点灯」を繰り返します。</li>
+<li>"おまちください"および"ボタンをおしてください"ランプ 　ボタンが押されると2秒間、"おまちください"を点灯し、その後"ボタンをおしてください"を点灯します。</li>
+</ul>
+<h3>ライブラリの使い方</h3>
+<h4>コールバック</h4>
+<p>ライブラリからは4つの関数がコールされます。これらの関数が存在しなければビルドエラーになります。 関数を削除したり宣言を変えないでください。 </p><dl class="section see"><dt>参照</dt><dd><a class="el" href="signal_8c.html#af938891011c0fa4f4ec9997fc55cb3dc" title="初期化コールバック ">OnInitialize()</a> <a class="el" href="signal_8c.html#ae89b5dc193195c5d8f4a5c6e2c04e9d0" title="開始コールバック ">OnStart()</a> <a class="el" href="signal_8c.html#af401c7d98e761bea7edb3cf5f8eb609b" title="タイマコールバック ">OnTimer()</a> <a class="el" href="signal_8c.html#addd5e276c1391af9169dcee245e52c56" title="ボタンコールバック ">OnButton()</a></dd></dl>
+<h4>模擬ハードウェアの制御</h4>
+<p>各ランプはの点灯状態は、ライブラリ内の専用関数にて制御します。 </p><dl class="section see"><dt>参照</dt><dd><a class="el" href="drv_8h.html#abf238602f8af8a054746fe4aa13fb8e2" title="車用信号色の設定 ">SetRoadwaySignalColor()</a> <a class="el" href="drv_8h.html#ab452127ba1d383e043a549ea58850b8c" title="歩行車用信号色の設定 ">SetCrosswalkSignalColor()</a> <a class="el" href="drv_8h.html#abb96c6a443bed3df5498bbf845431750" title="操作箱ランプの設定 ">SetPedestrianLamp()</a></dd></dl>
+<h3>実装上の注意</h3>
+<ul>
+<li>実装はC99規格に従う必要があります。</li>
+<li>最終的には組み込みマイコンで動作させるため、Cの標準ライブラリ(printfやmalloc)等は使わないでください。</li>
+<li>Debugモードでビルドするといくつか警告が発生しますが、無視してください。 </li>
+</ul>
+</div><h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="addd5e276c1391af9169dcee245e52c56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnButton </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ボタンコールバック </p>
+<p>プログラム開始後、ボタンが押された時にコールされます。 </p><dl class="section attention"><dt>注意</dt><dd>この関数は必須です。削除または宣言の変更をしないでください。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af938891011c0fa4f4ec9997fc55cb3dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnInitialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化コールバック </p>
+<p>プログラムの初期化時に1回だけライブラリからコールされます。 この関数内でアプリケーションを初期化してください。 </p><dl class="section attention"><dt>注意</dt><dd>この関数は必須です。削除または宣言の変更をしないでください。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae89b5dc193195c5d8f4a5c6e2c04e9d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnStart </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>開始コールバック </p>
+<p>プログラムの初期化終了後、プログラム開始時に1回だけライブラリからコールされます。 この関数内でプログラム開始に必要な初期化してください。 </p><dl class="section attention"><dt>注意</dt><dd>この関数は必須です。削除または宣言の変更をしないでください。 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af401c7d98e761bea7edb3cf5f8eb609b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnTimer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>elapse</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>タイマコールバック </p>
+<p>プログラム開始後、ライブラリから周期的にコールされます。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">elapse</td><td>前回コールされた時からの経過時間[msec] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>この関数は必須です。削除または宣言の変更をしないでください。 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

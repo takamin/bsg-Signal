@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Signal: drv.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Signal
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="annotated.html"><span>データ構造</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>大域各種</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">drv.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="drv_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef DRV_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define DRV_H_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2f">   16</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2fa1ec3b1f34903152b9975cad6a3788648">   17</a></span>&#160;    <a class="code" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2fa1ec3b1f34903152b9975cad6a3788648">RSCBlack</a> = 0,   </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2faa1ccf31e106241dcdb87f38ff05b8ef8">   18</a></span>&#160;    <a class="code" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2faa1ccf31e106241dcdb87f38ff05b8ef8">RSCBlue</a>,        </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2fad6502fe51cdd62c81d312913af079929">   19</a></span>&#160;    <a class="code" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2fad6502fe51cdd62c81d312913af079929">RSCYellow</a>,      </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2fac5c2585bb150e582c0b4bc26953028bd">   20</a></span>&#160;    <a class="code" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2fac5c2585bb150e582c0b4bc26953028bd">RSCRed</a>,         </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}<a class="code" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2f">RoadwaySignalColor</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7ac184377bcbb2cf1e0abcda5de472ef9c">   27</a></span>&#160;    <a class="code" href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7ac184377bcbb2cf1e0abcda5de472ef9c">CSCBlack</a> = 0,   </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7a6ec684d0f21d9504a922ea8c65dad200">   28</a></span>&#160;    <a class="code" href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7a6ec684d0f21d9504a922ea8c65dad200">CSCBlue</a>,        </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7a4b02dbe9a9f518364a3f34dfb589c104">   29</a></span>&#160;    <a class="code" href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7a4b02dbe9a9f518364a3f34dfb589c104">CSCRed</a>,         </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}<a class="code" href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7">CrosswalkSignalColor</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="drv_8h.html#a1327faf59007a7a4502e050975a2e6ba">   35</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="drv_8h.html#a1327faf59007a7a4502e050975a2e6baadefef3a928c0c50c98fd9d026745c189">   36</a></span>&#160;    <a class="code" href="drv_8h.html#a1327faf59007a7a4502e050975a2e6baadefef3a928c0c50c98fd9d026745c189">PLOff</a> = 0,      </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="drv_8h.html#a1327faf59007a7a4502e050975a2e6baa7ae125350f2f07196643e33a35c97408">   37</a></span>&#160;    <a class="code" href="drv_8h.html#a1327faf59007a7a4502e050975a2e6baa7ae125350f2f07196643e33a35c97408">PLPushButton</a>,   </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="drv_8h.html#a1327faf59007a7a4502e050975a2e6baa45922b0d05acf00ff42f466c1712487c">   38</a></span>&#160;    <a class="code" href="drv_8h.html#a1327faf59007a7a4502e050975a2e6baa45922b0d05acf00ff42f466c1712487c">PLWait</a>,         </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}<a class="code" href="drv_8h.html#a1327faf59007a7a4502e050975a2e6ba">PedestrianLamp</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drv_8h.html#a349e6943ce1b6d07239420ac41865aad">InitDriver</a>(<span class="keywordtype">void</span>* option);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drv_8h.html#a10463afa1d5a5127ed926a37e494d00f">UninitDriver</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drv_8h.html#abf238602f8af8a054746fe4aa13fb8e2">SetRoadwaySignalColor</a>(<a class="code" href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2f">RoadwaySignalColor</a> color);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drv_8h.html#ab452127ba1d383e043a549ea58850b8c">SetCrosswalkSignalColor</a>(<a class="code" href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7">CrosswalkSignalColor</a> color);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> <a class="code" href="drv_8h.html#abb96c6a443bed3df5498bbf845431750">SetPedestrianLamp</a>(<a class="code" href="drv_8h.html#a1327faf59007a7a4502e050975a2e6ba">PedestrianLamp</a> lamp);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;_Bool <a class="code" href="drv_8h.html#a5712f301a27c436992b0ee05562e9072">GetPedestrianButton</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="drv_8h_html_a569e5e907656f4f3af2c334af60fcd2faa1ccf31e106241dcdb87f38ff05b8ef8"><div class="ttname"><a href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2faa1ccf31e106241dcdb87f38ff05b8ef8">RSCBlue</a></div><div class="ttdef"><b>Definition:</b> drv.h:18</div></div>
+<div class="ttc" id="drv_8h_html_a569e5e907656f4f3af2c334af60fcd2fa1ec3b1f34903152b9975cad6a3788648"><div class="ttname"><a href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2fa1ec3b1f34903152b9975cad6a3788648">RSCBlack</a></div><div class="ttdef"><b>Definition:</b> drv.h:17</div></div>
+<div class="ttc" id="drv_8h_html_ab452127ba1d383e043a549ea58850b8c"><div class="ttname"><a href="drv_8h.html#ab452127ba1d383e043a549ea58850b8c">SetCrosswalkSignalColor</a></div><div class="ttdeci">void SetCrosswalkSignalColor(CrosswalkSignalColor color)</div><div class="ttdoc">歩行車用信号色の設定 </div></div>
+<div class="ttc" id="drv_8h_html_a7ecc7b6381009177912dfbbb7915c0a7"><div class="ttname"><a href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7">CrosswalkSignalColor</a></div><div class="ttdeci">CrosswalkSignalColor</div><div class="ttdoc">歩行者用信号色 </div><div class="ttdef"><b>Definition:</b> drv.h:26</div></div>
+<div class="ttc" id="drv_8h_html_a569e5e907656f4f3af2c334af60fcd2f"><div class="ttname"><a href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2f">RoadwaySignalColor</a></div><div class="ttdeci">RoadwaySignalColor</div><div class="ttdoc">車用信号色 </div><div class="ttdef"><b>Definition:</b> drv.h:16</div></div>
+<div class="ttc" id="drv_8h_html_a7ecc7b6381009177912dfbbb7915c0a7a4b02dbe9a9f518364a3f34dfb589c104"><div class="ttname"><a href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7a4b02dbe9a9f518364a3f34dfb589c104">CSCRed</a></div><div class="ttdef"><b>Definition:</b> drv.h:29</div></div>
+<div class="ttc" id="drv_8h_html_a1327faf59007a7a4502e050975a2e6baa45922b0d05acf00ff42f466c1712487c"><div class="ttname"><a href="drv_8h.html#a1327faf59007a7a4502e050975a2e6baa45922b0d05acf00ff42f466c1712487c">PLWait</a></div><div class="ttdef"><b>Definition:</b> drv.h:38</div></div>
+<div class="ttc" id="drv_8h_html_a569e5e907656f4f3af2c334af60fcd2fad6502fe51cdd62c81d312913af079929"><div class="ttname"><a href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2fad6502fe51cdd62c81d312913af079929">RSCYellow</a></div><div class="ttdef"><b>Definition:</b> drv.h:19</div></div>
+<div class="ttc" id="drv_8h_html_a5712f301a27c436992b0ee05562e9072"><div class="ttname"><a href="drv_8h.html#a5712f301a27c436992b0ee05562e9072">GetPedestrianButton</a></div><div class="ttdeci">_Bool GetPedestrianButton(void)</div><div class="ttdoc">操作箱ボタンの状態取得 </div></div>
+<div class="ttc" id="drv_8h_html_a569e5e907656f4f3af2c334af60fcd2fac5c2585bb150e582c0b4bc26953028bd"><div class="ttname"><a href="drv_8h.html#a569e5e907656f4f3af2c334af60fcd2fac5c2585bb150e582c0b4bc26953028bd">RSCRed</a></div><div class="ttdef"><b>Definition:</b> drv.h:20</div></div>
+<div class="ttc" id="drv_8h_html_a7ecc7b6381009177912dfbbb7915c0a7a6ec684d0f21d9504a922ea8c65dad200"><div class="ttname"><a href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7a6ec684d0f21d9504a922ea8c65dad200">CSCBlue</a></div><div class="ttdef"><b>Definition:</b> drv.h:28</div></div>
+<div class="ttc" id="drv_8h_html_a1327faf59007a7a4502e050975a2e6baa7ae125350f2f07196643e33a35c97408"><div class="ttname"><a href="drv_8h.html#a1327faf59007a7a4502e050975a2e6baa7ae125350f2f07196643e33a35c97408">PLPushButton</a></div><div class="ttdef"><b>Definition:</b> drv.h:37</div></div>
+<div class="ttc" id="drv_8h_html_a1327faf59007a7a4502e050975a2e6baadefef3a928c0c50c98fd9d026745c189"><div class="ttname"><a href="drv_8h.html#a1327faf59007a7a4502e050975a2e6baadefef3a928c0c50c98fd9d026745c189">PLOff</a></div><div class="ttdef"><b>Definition:</b> drv.h:36</div></div>
+<div class="ttc" id="drv_8h_html_abf238602f8af8a054746fe4aa13fb8e2"><div class="ttname"><a href="drv_8h.html#abf238602f8af8a054746fe4aa13fb8e2">SetRoadwaySignalColor</a></div><div class="ttdeci">void SetRoadwaySignalColor(RoadwaySignalColor color)</div><div class="ttdoc">車用信号色の設定 </div></div>
+<div class="ttc" id="drv_8h_html_a7ecc7b6381009177912dfbbb7915c0a7ac184377bcbb2cf1e0abcda5de472ef9c"><div class="ttname"><a href="drv_8h.html#a7ecc7b6381009177912dfbbb7915c0a7ac184377bcbb2cf1e0abcda5de472ef9c">CSCBlack</a></div><div class="ttdef"><b>Definition:</b> drv.h:27</div></div>
+<div class="ttc" id="drv_8h_html_a10463afa1d5a5127ed926a37e494d00f"><div class="ttname"><a href="drv_8h.html#a10463afa1d5a5127ed926a37e494d00f">UninitDriver</a></div><div class="ttdeci">void UninitDriver(void)</div><div class="ttdoc">ドライバ終了 </div></div>
+<div class="ttc" id="drv_8h_html_abb96c6a443bed3df5498bbf845431750"><div class="ttname"><a href="drv_8h.html#abb96c6a443bed3df5498bbf845431750">SetPedestrianLamp</a></div><div class="ttdeci">void SetPedestrianLamp(PedestrianLamp lamp)</div><div class="ttdoc">操作箱ランプの設定 </div></div>
+<div class="ttc" id="drv_8h_html_a1327faf59007a7a4502e050975a2e6ba"><div class="ttname"><a href="drv_8h.html#a1327faf59007a7a4502e050975a2e6ba">PedestrianLamp</a></div><div class="ttdeci">PedestrianLamp</div><div class="ttdoc">操作箱ランプ種別 </div><div class="ttdef"><b>Definition:</b> drv.h:35</div></div>
+<div class="ttc" id="drv_8h_html_a349e6943ce1b6d07239420ac41865aad"><div class="ttname"><a href="drv_8h.html#a349e6943ce1b6d07239420ac41865aad">InitDriver</a></div><div class="ttdeci">void InitDriver(void *option)</div><div class="ttdoc">ドライバ初期化 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>
