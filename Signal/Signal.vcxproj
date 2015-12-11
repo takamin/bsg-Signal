@@ -73,7 +73,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\bsg-pedsignal\gpio_signals.c" />
+    <ClCompile Include="..\bsg-pedsignal\statemac.c" />
+    <ClCompile Include="..\bsg-pedsignal\states.c" />
+    <ClCompile Include="..\bsg-pedsignal\timer.c" />
     <ClCompile Include="signal.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\bsg-pedsignal\gpio_signals.h" />
+    <ClInclude Include="..\bsg-pedsignal\statemac.h" />
+    <ClInclude Include="..\bsg-pedsignal\states.h" />
+    <ClInclude Include="..\bsg-pedsignal\timer.h" />
+    <ClInclude Include="drv.h" />
+    <ClInclude Include="signallib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

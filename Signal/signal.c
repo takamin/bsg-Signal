@@ -43,22 +43,25 @@
 */
 
 #include "signallib.h"
+#include "../bsg-pedsignal/statemac.h"
+#include "../bsg-pedsignal/states.h"
+#include "../bsg-pedsignal/timer.h"
 
 /*!
 	\brief サンプル用構造体
 	\details
 	サンプル動作を行うための情報を記憶する構造体です。
 */
-typedef struct{
-	struct{
-		int cnt;						/*!< 点灯時間 */
-		RoadwaySignalColor col;			/*!< 点灯色 */
-	}roadway;							/*!< 車用信号 */
-	int pedestrianCnt;					/*!< "おまちください"ランプ点灯時間 */
-	CrosswalkSignalColor crosswalkCol;	/*!< 歩行者用信号の点灯色*/
-}Context;
-
-static Context ctx;
+//typedef struct{
+//	struct{
+//		int cnt;						/*!< 点灯時間 */
+//		RoadwaySignalColor col;			/*!< 点灯色 */
+//	}roadway;							/*!< 車用信号 */
+//	int pedestrianCnt;					/*!< "おまちください"ランプ点灯時間 */
+//	CrosswalkSignalColor crosswalkCol;	/*!< 歩行者用信号の点灯色*/
+//}Context;
+//
+//static Context ctx;
 
 /*!
 	\brief 初期化コールバック
@@ -69,10 +72,7 @@ static Context ctx;
 	この関数は必須です。削除または宣言の変更をしないでください。
 */
 void OnInitialize(void){
-	ctx.pedestrianCnt = 0;
-	ctx.roadway.cnt = 0;
-	ctx.roadway.col = RSCBlack;
-	ctx.crosswalkCol = CSCBlack;
+	statemac_init(&state_machine, &sVB0);
 }
 
 /*!
@@ -95,21 +95,8 @@ void OnStart(void){
 	この関数は必須です。削除または宣言の変更をしないでください。
 */
 void OnTimer(int elapse){
-	ctx.roadway.cnt += elapse;
-
-	if (ctx.roadway.cnt >= 500) {
-		ctx.roadway.cnt %= 500;
-		ctx.roadway.col = (ctx.roadway.col + 1) % (RSCRed + 1);
-		SetRoadwaySignalColor(ctx.roadway.col);
-	}
-
-	if (ctx.pedestrianCnt >= elapse) {
-		ctx.pedestrianCnt -= elapse;
-		SetPedestrianLamp(PLWait);
-	} else {
-		ctx.pedestrianCnt = 0;
-		SetPedestrianLamp(PLPushButton);
-	}
+	timer_increment(elapse * 1000);
+	statemac_run(&state_machine);
 }
 
 /*!
@@ -120,11 +107,8 @@ void OnTimer(int elapse){
 	この関数は必須です。削除または宣言の変更をしないでください。
 */
 void OnButton(void){
-	ctx.pedestrianCnt = 2000;
-	SetPedestrianLamp(PLWait);
-
-	ctx.crosswalkCol = (ctx.crosswalkCol + 1) % (CSCRed + 1);
-	SetCrosswalkSignalColor(ctx.crosswalkCol);
+	extern int button_pushed;
+	button_pushed = 1;
 }
 
 /*!
