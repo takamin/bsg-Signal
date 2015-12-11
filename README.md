@@ -1,5 +1,5 @@
-Signal - The Emulator for Japanese Pedestrian Push-Button Signal As A Challenge Of Study Group
-==============================================================================================
+Signal - The Push-Button Signal Emulator As A Challenge Of BeNest SD's Study Group
+==================================================================================
 
 ## Doxygen Document
 
