@@ -1,3 +1,4 @@
 [submodule "bsg-pedsignal"]
 	path = bsg-pedsignal
 	url = git@github.com:takamin/bsg-pedsignal.git
+	branch = for_Signal
